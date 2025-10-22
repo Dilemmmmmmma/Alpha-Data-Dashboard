@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Alpha 数据看板",
+  "version": "0.0.5",
+  "description": "在 Binance Alpha 页面显示：4倍时间、稳定度、波动率、交易量、交易量积分、磨损/磨损率。Display 4x time, stability, volatility, volume, volume points, wear/wear rate.",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "https://www.binance.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.binance.com/zh-CN/alpha/*",
+        "https://www.binance.com/en/alpha/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
